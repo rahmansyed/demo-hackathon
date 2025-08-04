@@ -1,4 +1,4 @@
 build-HelloWorldFunctionUberJar:
 	@ mvn clean package
-	@ if not exist $(ARTIFACTS_DIR)\lib mkdir $(ARTIFACTS_DIR)\lib
-	@ xcopy .\target\HelloWorld*.jar $(ARTIFACTS_DIR)\lib\ /Y
+	@ mkdir -p $(ARTIFACTS_DIR)/lib
+	@ cp  ./target/HelloWorld*.jar $(ARTIFACTS_DIR)/lib/
