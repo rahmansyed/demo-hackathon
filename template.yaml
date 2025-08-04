@@ -8,7 +8,7 @@ Resources:
   HelloWorldFunctionUberJar:
     Type: AWS::Serverless::Function 
     Properties:
-      FunctionName: 02-maven-uberjar
+      FunctionName: !Sub "${AWS::StackName}-HelloWorldFunction"
       CodeUri: HelloWorldFunction/
       Handler: helloworld.App::handleRequest
       Runtime: java11
